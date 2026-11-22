@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ziheng-api",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-03-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist/client",
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ziheng-db",
+      "database_id": "替换为你的 D1 数据库 ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "DEMO_MODE": "false",
+    "ALLOW_DEV_LOGIN": "false",
+    "APP_ORIGIN": "https://your-domain.example.com"
+  }
+}
